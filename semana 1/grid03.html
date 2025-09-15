@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid layout com caixas</title>
+    <style>
+        div.container{
+            background-color: darkgray;
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            grid-template-rows: repeat(3, 150px);
+            padding: 5px;
+            gap: 5px;
+        }
+        #caixa01{
+            background-color: lightgreen;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 1;
+            grid-column-end: 5;
+        }
+        #caixa02{
+            background-color: lightsalmon;
+            grid-row-start: 2;
+            grid-row-end: 4;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        #caixa03{
+            background-color: lightblue;
+            grid-row-start: 2;
+            grid-row-end: 4;
+            grid-column-start: 3;
+            grid-column-end: 5;
+        }
+
+        section{
+            margin-top: 10px;
+            background-color: darkmagenta;
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            grid-template-rows: repeat(3, 150px);
+            padding: 5px;
+            gap: 5px;
+        }
+        #desafio1{
+            background-color: darkred;
+            grid-row-start: 1;
+            grid-row-end: 3;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        #desafio2{
+            background-color: darkolivegreen;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 3;
+            grid-column-end: -1;
+        }
+        #desafio3{
+            background-color: black;
+            grid-row-start: 2;
+            grid-row-end: -1;
+            grid-column-start: 3;
+            grid-column-end: -1;
+        }
+        #desafio4{
+            background-color: wheat;
+            grid-row-start: 3;
+            grid-row-end: -1;
+            grid-column-start: 1;
+            grid-column-end: -2;
+        }
+        </style>
+</head>
+<body>
+    <div class="container">
+        <div  id="caixa01"></div>
+        <div  id="caixa02"></div>
+        <div  id="caixa03"></div>
+    </div>
+
+    <section class="desafio-container">
+        <div id="desafio1"></div>
+        <div id="desafio2"></div>
+        <div id="desafio3"></div>
+        <div id="desafio4"></div>
+    </section>
+</body>
+</html>
