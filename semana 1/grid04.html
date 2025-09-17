@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio - layout de site</title>
+    <style>
+        *{
+            margin: 0; padding: 0;
+        }
+        body{
+            background-color: darkgrey;
+        }
+        div.container{
+            height: 100vh;
+            display: grid;
+            grid-template: 80px 30px 1fr 30px /2fr 200px;
+        }
+        div#top{
+            /* grid-row: 1/span 1;
+            grid-column: 1/span 3; */
+            grid-area: 1/1/span 1/span3;
+            background-color: blue;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 3vw;
+            font-weight: bolder;
+        }
+        div#menu{
+            grid-area: 2/1/span 1/span 3;
+            background-color: rgb(55, 55, 255);
+            color: rgb(172, 172, 253);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            font-size: 1.5vw;
+        }
+        div#main{
+            grid-area: 3/1/span 1/ span 2;
+            background-color: white;
+        }
+            #main > h2{
+                color: blue;
+                text-indent: 10px;
+                text-align: left;
+                margin: 10px;
+                padding: 10px;
+            }
+            #main p{
+                font-family: Arial, Helvetica, sans-serif;
+                margin: auto;
+                padding: 20px;
+                max-width: 750px;
+                text-align: justify;
+            }
+        div#secondary{
+            grid-area: 3/3/span 1/span 1;
+            background-color: rgb(30, 30, 30);
+            color: black;
+            text-align: center;
+            padding: 10px;
+        }
+        div#footer{
+            grid-area: 4/1/span 1/span 3;
+            background-color: white;
+            color: gray;
+            border-top: 1px solid gray;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="top">NOME DO SITE</div>
+        <div id="menu">menu</div>
+        <div id="main">
+            <h2>| Conteúdo Principal</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut tempora nobis hic eligendi provident sequi eum quo alias a expedita debitis molestias nisi eveniet at sunt, tenetur quisquam quasi mollitia!
+            </p>
+                
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi fugit dignissimos mollitia! Praesentium aut molestias maiores voluptates nam eos laboriosam eum error corporis aliquam? Soluta praesentium odio assumenda commodi molestiae!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus eligendi rem sit dignissimos ipsa. Alias quibusdam unde quam obcaecati deserunt earum ut ipsum expedita quae atque assumenda maxime, fugit animi!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam sunt, impedit magni necessitatibus corporis cupiditate voluptas nemo commodi, voluptatibus incidunt consequatur iusto perspiciatis eaque qui aspernatur nisi officiis aliquid voluptates!
+            </p>
+        </div>
+        <div id="secondary">
+            <p>
+                tela <br> secundária
+            </p>
+        </div>
+        <div id="footer">
+            <p>Rodapé</p>
+        </div>
+    </div>
+</body>
+</html>
