@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos no Dom</title>
+    <style>
+        main{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 70vh;
+            flex-direction: column;
+        }
+        div.color{
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background-image: linear-gradient(45deg, black, rgb(65, 65, 65), black);
+        }
+        button.alter-color{
+            padding: 10px;
+            border-radius: 10px;
+            background-color: green;
+            color: white;
+            border: 1px solid darkgreen;
+            align-self: flex-start;
+            margin-left: 10%;
+        }
+        .alter-color:active{
+            transform: scale(1.1);
+            background-color: rgb(73, 142, 30);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <button class="alter-color">
+            Mudar Cor
+        </button>
+        <div class="color">
+
+        </div>
+    </main>
+</body>
+<script>
+    const button = document.querySelector(".alter-color")
+    const colorContainer = document.querySelector(".color")
+    const colors = ['green', 'red', 'blue', 'darkred', 'gold', 'blueviolet', 'cyan']
+    let cont = 0
+    button.addEventListener("click", () =>{
+        colorContainer.style.background = colors[cont]
+        if(cont<colors.length-1){cont ++ } else{cont = 0}
+    })
+</script>
+</html 
