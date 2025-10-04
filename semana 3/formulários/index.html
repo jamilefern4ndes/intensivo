@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulário Válido</title>
+</head>
+<body>
+    <form action="#" autocomplete="off">
+        <h1>NOVO USUÁRIO</h1>
+        <label for="primeiroNome">Nome</label>
+            <input
+                class="inputText" 
+                type="text" 
+                name="primeiroNome" 
+                id="primeiroNome" 
+                placeholder="Primeiro Nome" 
+                required
+                autofocus
+                autocomplete="off"
+            >
+        <label for="sobrenome">Sobrenome</label>
+            <input
+                class="inputText" 
+                type="text" 
+                name="sobrenome" 
+                id="sobrenome" 
+                placeholder="Sobrenome" 
+                required
+                autocomplete="off"
+            >
+        <label for="email">E-mail</label>
+            <input
+                class="inputText" 
+                type="email" 
+                name="email" 
+                id="email" 
+                placeholder="exemplo@gmail.com" 
+                required
+                autocomplete="off"
+            >
+        <label for="telefone">Telefone</label>
+            <input
+                class="inputText" 
+                type="tel" 
+                name="telefone" 
+                id="telefone" 
+                placeholder="(xx) Xxxxx-xxxx" 
+                min="8" 
+                required
+                autocomplete="off"
+            >
+        <label for="senha1">Senhas</label>
+            <input
+                class="inputText" 
+                type="password" 
+                name="senha1" 
+                id="senha1" 
+                minlength="6" 
+                placeholder="senha" 
+                required
+                autocomplete="off"
+            >
+            <input
+                class="inputText" 
+                type="password" 
+                name="senha2" 
+                id="senha2" 
+                minlength="6" 
+                placeholder="Confirme a senha" 
+                required
+                autocomplete="off"
+            >
+        <div>
+            <input class="form-button" id="submit" type="submit" value="cadastrar">
+            <input class="form-button" id="reset" type="reset" value="Limpar">
+        </div>
+    </form> 
+    <script src="script.js">
+    </script>
+</body>
+</html>
